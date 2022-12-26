@@ -8,12 +8,15 @@ window.addEventListener("DOMContentLoaded", function () {
   modalBtn.addEventListener("click", modalOpen);
   modal.addEventListener("click", modalClose);
   formBtns.forEach((item) => {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
       modal.classList.remove("active");
       popSuccess.classList.add("success");
+      clearTimeout(showByTime);
     });
   });
-  popSuccess.addEventListener("click", function () {
+  popSuccess.addEventListener("click", function (e) {
+    e.preventDefault();
     popSuccess.classList.remove("success");
     document.body.style.overflow = "";
   });
