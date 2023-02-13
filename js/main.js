@@ -2,6 +2,8 @@ const modalBtn = document.querySelector(".bike__link");
 const modal = document.querySelector("#pop-up");
 const formBtns = document.querySelectorAll(".form__btn");
 const popSuccess = document.querySelector(".pop-up__success");
+const form = document.querySelector("#form");
+const popUpForm = document.querySelector("#pop_up-form");
 
 window.addEventListener("DOMContentLoaded", function () {
   setTimeout(showByTime, 5000);
@@ -40,6 +42,11 @@ function showByTime() {
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
+
+form.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("submit form");
+});
 
 $(function () {
   $(".bike__slider,.slider__items").slick({

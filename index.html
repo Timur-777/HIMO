@@ -66,7 +66,7 @@
             <div class="pop-up" id="pop-up">
               <div class="container">
                 <div class="pop-up__inner">
-                  <form class="form">
+                  <form class="form" id="pop_up-form">
                     <h4 class="form__title">Заказать</h4>
                     <p class="form__text">
                       Если Вы хотите заказать велосипед, оставьте свой контакт и наш
@@ -380,17 +380,18 @@
       <section class="price" id="price">
         <div class="container">
           <div class="price__inner">
-            <form class="form">
+            <form class="form" id="form">
               <h4 class="form__title">Заказать</h4>
               <p class="form__text">
                 Если Вы хотите заказать велосипед, оставьте свой контакт и наш
                 менеджер перезвонит вам в ближайшее время
               </p>
-              <input class="form__input-name" type="text" placeholder="имя" />
+              <input class="form__input-name" type="text" placeholder="имя"  name="username"/>
               <input
                 class="form__input-phone"
-              type="tel"
+              type="tel" 
                 placeholder="телефон"
+                name="tel"
               />
               <p class="form__text-grey">выберите желаемый цвет</p>
               <div class="form__label-box">
